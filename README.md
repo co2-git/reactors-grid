@@ -12,3 +12,15 @@ import {Row} from 'reactors-grid';
   // ...
 </Row>
 ```
+
+# Stack
+
+Stacks are vertical rows.
+
+```javascript
+import {Stack} from 'reactors-grid';
+
+<Stack>
+  // ...
+</Stack>
+```
