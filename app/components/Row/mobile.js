@@ -4,7 +4,7 @@ import {View} from 'react-native';
 export default function RowMobile(props) {
   const style = [
     {
-      flexDisplay: 'row'
+      flexDirection: 'row',
     },
     props.style,
   ];
