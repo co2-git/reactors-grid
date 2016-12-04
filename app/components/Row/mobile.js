@@ -5,6 +5,7 @@ export default function RowMobile(props) {
   const style = [
     {
       flexDirection: 'row',
+      justifyContent: 'space-between',
     },
     props.style,
   ];
