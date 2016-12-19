@@ -1,6 +1,6 @@
 {
   "name": "reactors-grid",
-  "version": "1.3.0",
+  "version": "1.4.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {

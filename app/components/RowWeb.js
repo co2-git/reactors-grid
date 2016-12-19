@@ -1,15 +1,14 @@
 import React from 'react';
 
-export default function StackWeb(props) {
+export default function RowWeb(props) {
   const style = {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'space-between',
+    alignItems: 'center',
     ...props.style,
   };
-  style.justifyContent = 'space-between';
   return (
-    <div style={style} {...props}>
+    <div style={style}>
       {props.children}
     </div>
   );
