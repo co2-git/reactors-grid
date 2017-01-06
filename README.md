@@ -3,26 +3,20 @@ Reactors Grid
 
 Flex grid for reactors.
 
-# Row
+# Install
 
-```javascript
-import {Row} from 'reactors-grid';
-
-<Row>
-  // ...
-</Row>
+```bash
+npm install reactors-grid
 ```
 
-# Stack
-
-Stacks are vertical rows.
+# Usage
 
 ```javascript
-import {Stack} from 'reactors-grid';
+import {Row, Slack} from 'reactors-grid';
 
-<Stack>
-  // ...
-</Stack>
+<Row>
+  <Slack />
+</Row>
 ```
 
 View examples [here](https://co2-git.github.io/reactors-grid/)
