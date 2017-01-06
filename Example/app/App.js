@@ -17,12 +17,60 @@ export default class App extends Component {
         </Stack>
 
         <Stack style={styles.example}>
-          <Text style={styles.title}>{'<Row space-between />'}</Text>
+          <Text style={styles.title}>{'<Row reverse />'}</Text>
 
-          <Row space-between style={styles.children}>
+          <Row reverse style={styles.children}>
             <Text style={styles.child}>{'1'}</Text>
             <Text style={styles.child}>{'2'}</Text>
             <Text style={styles.child}>{'3'}</Text>
+          </Row>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row wrap />'}</Text>
+
+          <Row wrap style={styles.children}>
+            <Text style={styles.child}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={styles.child}>{'3'}</Text>
+            <Text style={styles.child}>{'4'}</Text>
+            <Text style={styles.child}>{'5'}</Text>
+            <Text style={styles.child}>{'6'}</Text>
+            <Text style={styles.child}>{'7'}</Text>
+            <Text style={styles.child}>{'8'}</Text>
+            <Text style={styles.child}>{'9'}</Text>
+            <Text style={styles.child}>{'10'}</Text>
+            <Text style={styles.child}>{'11'}</Text>
+            <Text style={styles.child}>{'12'}</Text>
+            <Text style={styles.child}>{'13'}</Text>
+            <Text style={styles.child}>{'14'}</Text>
+            <Text style={styles.child}>{'15'}</Text>
+            <Text style={styles.child}>{'16'}</Text>
+          </Row>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row nowrap />'}</Text>
+          <Text style={styles.title}>{'<Row no-wrap />'}</Text>
+          <Text style={styles.title}>{'<Row wrap={false} />'}</Text>
+
+          <Row nowrap style={styles.children}>
+            <Text style={styles.child}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={styles.child}>{'3'}</Text>
+            <Text style={styles.child}>{'4'}</Text>
+            <Text style={styles.child}>{'5'}</Text>
+            <Text style={styles.child}>{'6'}</Text>
+            <Text style={styles.child}>{'7'}</Text>
+            <Text style={styles.child}>{'8'}</Text>
+            <Text style={styles.child}>{'9'}</Text>
+            <Text style={styles.child}>{'10'}</Text>
+            <Text style={styles.child}>{'11'}</Text>
+            <Text style={styles.child}>{'12'}</Text>
+            <Text style={styles.child}>{'13'}</Text>
+            <Text style={styles.child}>{'14'}</Text>
+            <Text style={styles.child}>{'15'}</Text>
+            <Text style={styles.child}>{'16'}</Text>
           </Row>
         </Stack>
 
@@ -37,12 +85,72 @@ export default class App extends Component {
         </Stack>
 
         <Stack style={styles.example}>
-          <Text style={styles.title}>{'<Row center />'}</Text>
+          <Text style={styles.title}>{'<Row space-between />'}</Text>
 
-          <Row center style={styles.children}>
+          <Row space-between style={styles.children}>
             <Text style={styles.child}>{'1'}</Text>
             <Text style={styles.child}>{'2'}</Text>
             <Text style={styles.child}>{'3'}</Text>
+          </Row>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row left />'}</Text>
+
+          <Row left style={styles.children}>
+            <Text style={styles.child}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={styles.child}>{'3'}</Text>
+          </Row>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row center-x />'}</Text>
+
+          <Row center-x style={styles.children}>
+            <Text style={styles.child}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={styles.child}>{'3'}</Text>
+          </Row>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row right />'}</Text>
+
+          <Row right style={styles.children}>
+            <Text style={styles.child}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={styles.child}>{'3'}</Text>
+          </Row>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row up />'}</Text>
+
+          <Row up style={styles.children}>
+            <Text style={{...styles.child, height: 80}}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={{...styles.child, height: 30}}>{'3'}</Text>
+          </Row>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row down />'}</Text>
+
+          <Row down style={styles.children}>
+            <Text style={{...styles.child, height: 80}}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={{...styles.child, height: 30}}>{'3'}</Text>
+          </Row>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row center-y />'}</Text>
+
+          <Row center-y style={styles.children}>
+            <Text style={{...styles.child, height: 80}}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={{...styles.child, height: 30}}>{'3'}</Text>
           </Row>
         </Stack>
 
@@ -113,5 +221,6 @@ const styles = StyleSheet.create({
     margin: 4,
     borderRadius: 3,
     backgroundColor: 'white',
+    height: 50,
   },
 });
