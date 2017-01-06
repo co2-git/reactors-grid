@@ -3,6 +3,7 @@ import React from 'react';
 export default function RowWeb(props) {
   let justifyContent = 'space-between';
   let alignItems = 'center';
+  let alignContent = 'stretch';
   let flexDirection = 'row';
   let flexWrap = 'nowrap';
 
@@ -51,7 +52,27 @@ export default function RowWeb(props) {
     } break;
 
     case 'wrap': {
-      flexWrap = props.wrap ? 'wrap' : 'nowrap';
+      switch (props.wrap) {
+
+      case true: {
+        flexWrap = 'wrap';
+      } break;
+
+      case false: {
+        flexWrap = 'nowrap';
+      } break;
+
+      case 'up': {
+        flexWrap = 'wrap';
+        alignContent = 'flex-start';
+      } break;
+
+      case 'down': {
+        flexWrap = 'wrap';
+        alignContent = 'flex-end';
+      } break;
+
+      }
     } break;
 
     case 'nowrap':
@@ -59,11 +80,22 @@ export default function RowWeb(props) {
       flexWrap = 'nowrap';
     } break;
 
+    case 'wrap-up': {
+      flexWrap = 'wrap';
+      alignContent = 'flex-start';
+    } break;
+
+    case 'wrap-down': {
+      flexWrap = 'wrap';
+      alignContent = 'flex-end';
+    } break;
+
     }
   }
 
   const style = {
     display: 'flex',
+    alignContent,
     alignItems,
     flexDirection,
     flexWrap,

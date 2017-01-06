@@ -86,87 +86,61 @@ class App extends _react.Component {
           '<Row wrap />'
         ),
         _react2.default.createElement(
-          _reactorsGrid.Row,
-          { wrap: true, style: styles.children },
+          _reactors.View,
+          { style: { width: 200 } },
           _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '1'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '2'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '3'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '4'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '5'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '6'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '7'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '8'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '9'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '10'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '11'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '12'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '13'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '14'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '15'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '16'
+            _reactorsGrid.Row,
+            { wrap: true, style: styles.children },
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '1'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '2'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '3'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '4'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '5'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '6'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '7'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '8'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '9'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '10'
+            )
           )
         )
       ),
@@ -189,87 +163,205 @@ class App extends _react.Component {
           '<Row wrap={false} />'
         ),
         _react2.default.createElement(
-          _reactorsGrid.Row,
-          { nowrap: true, style: styles.children },
+          _reactors.View,
+          { style: { width: 200 } },
           _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '1'
-          ),
+            _reactorsGrid.Row,
+            { nowrap: true, style: styles.children },
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '1'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '2'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '3'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '4'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '5'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '6'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '7'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '8'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '9'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '10'
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _reactorsGrid.Stack,
+        { style: styles.example },
+        _react2.default.createElement(
+          _reactors.Text,
+          { style: styles.title },
+          '<Row wrap="up" />'
+        ),
+        _react2.default.createElement(
+          _reactors.Text,
+          { style: styles.title },
+          '<Row wrap-up />'
+        ),
+        _react2.default.createElement(
+          _reactors.View,
+          { style: { width: 200 } },
           _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '2'
-          ),
+            _reactorsGrid.Row,
+            { 'wrap-up': true, style: _extends({}, styles.children, { height: 300 }) },
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '1'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '2'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '3'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '4'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '5'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '6'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '7'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '8'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '9'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '10'
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _reactorsGrid.Stack,
+        { style: styles.example },
+        _react2.default.createElement(
+          _reactors.Text,
+          { style: styles.title },
+          '<Row wrap="down" />'
+        ),
+        _react2.default.createElement(
+          _reactors.Text,
+          { style: styles.title },
+          '<Row wrap-down />'
+        ),
+        _react2.default.createElement(
+          _reactors.View,
+          { style: { width: 200 } },
           _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '3'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '4'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '5'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '6'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '7'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '8'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '9'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '10'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '11'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '12'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '13'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '14'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '15'
-          ),
-          _react2.default.createElement(
-            _reactors.Text,
-            { style: styles.child },
-            '16'
+            _reactorsGrid.Row,
+            { 'wrap-down': true, style: _extends({}, styles.children, { height: 300 }) },
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '1'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '2'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '3'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '4'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '5'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '6'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '7'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '8'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '9'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '10'
+            )
           )
         )
       ),
@@ -567,7 +659,8 @@ const styles = _reactors.StyleSheet.create({
   container: {
     backgroundColor: '#999',
     borderRadius: 8,
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    fontFamily: 'sans-serif'
   },
   example: {
     border: '1px solid #999',
@@ -580,11 +673,17 @@ const styles = _reactors.StyleSheet.create({
   title: {
     padding: 10,
     fontWeight: 'bold',
-    fontSize: 22
+    fontSize: 22,
+    backgroundColor: '#444',
+    color: '#fff',
+    borderRadius: 4,
+    marginBottom: 10,
+    border: '5px solid #222'
   },
   children: {
     backgroundColor: '#ccc',
-    borderRadius: 4
+    borderRadius: 4,
+    border: '5px solid #222'
   },
   childrenStack: {
     height: 200

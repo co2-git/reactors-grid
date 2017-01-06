@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text} from 'reactors';
+import {StyleSheet, Text, View} from 'reactors';
 import {Row, Stack} from 'reactors-grid';
 
 export default class App extends Component {
@@ -29,24 +29,20 @@ export default class App extends Component {
         <Stack style={styles.example}>
           <Text style={styles.title}>{'<Row wrap />'}</Text>
 
-          <Row wrap style={styles.children}>
-            <Text style={styles.child}>{'1'}</Text>
-            <Text style={styles.child}>{'2'}</Text>
-            <Text style={styles.child}>{'3'}</Text>
-            <Text style={styles.child}>{'4'}</Text>
-            <Text style={styles.child}>{'5'}</Text>
-            <Text style={styles.child}>{'6'}</Text>
-            <Text style={styles.child}>{'7'}</Text>
-            <Text style={styles.child}>{'8'}</Text>
-            <Text style={styles.child}>{'9'}</Text>
-            <Text style={styles.child}>{'10'}</Text>
-            <Text style={styles.child}>{'11'}</Text>
-            <Text style={styles.child}>{'12'}</Text>
-            <Text style={styles.child}>{'13'}</Text>
-            <Text style={styles.child}>{'14'}</Text>
-            <Text style={styles.child}>{'15'}</Text>
-            <Text style={styles.child}>{'16'}</Text>
-          </Row>
+          <View style={{width: 200}}>
+            <Row wrap style={styles.children}>
+              <Text style={styles.child}>{'1'}</Text>
+              <Text style={styles.child}>{'2'}</Text>
+              <Text style={styles.child}>{'3'}</Text>
+              <Text style={styles.child}>{'4'}</Text>
+              <Text style={styles.child}>{'5'}</Text>
+              <Text style={styles.child}>{'6'}</Text>
+              <Text style={styles.child}>{'7'}</Text>
+              <Text style={styles.child}>{'8'}</Text>
+              <Text style={styles.child}>{'9'}</Text>
+              <Text style={styles.child}>{'10'}</Text>
+            </Row>
+          </View>
         </Stack>
 
         <Stack style={styles.example}>
@@ -54,24 +50,60 @@ export default class App extends Component {
           <Text style={styles.title}>{'<Row no-wrap />'}</Text>
           <Text style={styles.title}>{'<Row wrap={false} />'}</Text>
 
-          <Row nowrap style={styles.children}>
-            <Text style={styles.child}>{'1'}</Text>
-            <Text style={styles.child}>{'2'}</Text>
-            <Text style={styles.child}>{'3'}</Text>
-            <Text style={styles.child}>{'4'}</Text>
-            <Text style={styles.child}>{'5'}</Text>
-            <Text style={styles.child}>{'6'}</Text>
-            <Text style={styles.child}>{'7'}</Text>
-            <Text style={styles.child}>{'8'}</Text>
-            <Text style={styles.child}>{'9'}</Text>
-            <Text style={styles.child}>{'10'}</Text>
-            <Text style={styles.child}>{'11'}</Text>
-            <Text style={styles.child}>{'12'}</Text>
-            <Text style={styles.child}>{'13'}</Text>
-            <Text style={styles.child}>{'14'}</Text>
-            <Text style={styles.child}>{'15'}</Text>
-            <Text style={styles.child}>{'16'}</Text>
-          </Row>
+          <View style={{width: 200}}>
+            <Row nowrap style={styles.children}>
+              <Text style={styles.child}>{'1'}</Text>
+              <Text style={styles.child}>{'2'}</Text>
+              <Text style={styles.child}>{'3'}</Text>
+              <Text style={styles.child}>{'4'}</Text>
+              <Text style={styles.child}>{'5'}</Text>
+              <Text style={styles.child}>{'6'}</Text>
+              <Text style={styles.child}>{'7'}</Text>
+              <Text style={styles.child}>{'8'}</Text>
+              <Text style={styles.child}>{'9'}</Text>
+              <Text style={styles.child}>{'10'}</Text>
+            </Row>
+          </View>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row wrap="up" />'}</Text>
+          <Text style={styles.title}>{'<Row wrap-up />'}</Text>
+
+          <View style={{width: 200}}>
+            <Row wrap-up style={{...styles.children, height: 300}}>
+              <Text style={styles.child}>{'1'}</Text>
+              <Text style={styles.child}>{'2'}</Text>
+              <Text style={styles.child}>{'3'}</Text>
+              <Text style={styles.child}>{'4'}</Text>
+              <Text style={styles.child}>{'5'}</Text>
+              <Text style={styles.child}>{'6'}</Text>
+              <Text style={styles.child}>{'7'}</Text>
+              <Text style={styles.child}>{'8'}</Text>
+              <Text style={styles.child}>{'9'}</Text>
+              <Text style={styles.child}>{'10'}</Text>
+            </Row>
+          </View>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row wrap="down" />'}</Text>
+          <Text style={styles.title}>{'<Row wrap-down />'}</Text>
+
+          <View style={{width: 200}}>
+            <Row wrap-down style={{...styles.children, height: 300}}>
+              <Text style={styles.child}>{'1'}</Text>
+              <Text style={styles.child}>{'2'}</Text>
+              <Text style={styles.child}>{'3'}</Text>
+              <Text style={styles.child}>{'4'}</Text>
+              <Text style={styles.child}>{'5'}</Text>
+              <Text style={styles.child}>{'6'}</Text>
+              <Text style={styles.child}>{'7'}</Text>
+              <Text style={styles.child}>{'8'}</Text>
+              <Text style={styles.child}>{'9'}</Text>
+              <Text style={styles.child}>{'10'}</Text>
+            </Row>
+          </View>
         </Stack>
 
         <Stack style={styles.example}>
@@ -194,6 +226,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#999',
     borderRadius: 8,
     alignItems: 'stretch',
+    fontFamily: 'sans-serif',
   },
   example: {
     border: '1px solid #999',
@@ -207,10 +240,16 @@ const styles = StyleSheet.create({
     padding: 10,
     fontWeight: 'bold',
     fontSize: 22,
+    backgroundColor: '#444',
+    color: '#fff',
+    borderRadius: 4,
+    marginBottom: 10,
+    border: '5px solid #222',
   },
   children: {
     backgroundColor: '#ccc',
     borderRadius: 4,
+    border: '5px solid #222',
   },
   childrenStack: {
     height: 200,
