@@ -667,6 +667,78 @@ class App extends _react.Component {
         _react2.default.createElement(
           _reactors.Text,
           { style: styles.title },
+          '<Row wrap="stretch" />'
+        ),
+        _react2.default.createElement(
+          _reactors.Text,
+          { style: styles.title },
+          '<Row wrap-stretch />'
+        ),
+        _react2.default.createElement(
+          _reactors.View,
+          { style: { width: 200 } },
+          _react2.default.createElement(
+            _reactorsGrid.Row,
+            { 'wrap-stretch': true, style: _extends({}, styles.children, { height: 300 }) },
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '1'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '2'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '3'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '4'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '5'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '6'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '7'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '8'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '9'
+            ),
+            _react2.default.createElement(
+              _reactors.Text,
+              { style: styles.child },
+              '10'
+            )
+          )
+        )
+      ),
+      _react2.default.createElement(
+        _reactorsGrid.Stack,
+        { style: styles.example },
+        _react2.default.createElement(
+          _reactors.Text,
+          { style: styles.title },
           '<Stack />'
         ),
         _react2.default.createElement(

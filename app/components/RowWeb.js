@@ -77,6 +77,11 @@ export default function RowWeb(props) {
         alignContent = 'center';
       } break;
 
+      case 'stretch': {
+        flexWrap = 'wrap';
+        alignContent = 'stretch';
+      } break;
+
       }
     } break;
 
@@ -98,6 +103,11 @@ export default function RowWeb(props) {
     case 'wrap-center': {
       flexWrap = 'wrap';
       alignContent = 'center';
+    } break;
+
+    case 'wrap-stretch': {
+      flexWrap = 'wrap';
+      alignContent = 'stretch';
     } break;
 
     }
