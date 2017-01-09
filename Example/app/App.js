@@ -227,6 +227,46 @@ export default class App extends Component {
         </Stack>
 
         <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row wrap="around" />'}</Text>
+          <Text style={styles.title}>{'<Row wrap-around />'}</Text>
+
+          <View style={{width: 200}}>
+            <Row wrap-around style={{...styles.children, height: 300}}>
+              <Text style={styles.child}>{'1'}</Text>
+              <Text style={styles.child}>{'2'}</Text>
+              <Text style={styles.child}>{'3'}</Text>
+              <Text style={styles.child}>{'4'}</Text>
+              <Text style={styles.child}>{'5'}</Text>
+              <Text style={styles.child}>{'6'}</Text>
+              <Text style={styles.child}>{'7'}</Text>
+              <Text style={styles.child}>{'8'}</Text>
+              <Text style={styles.child}>{'9'}</Text>
+              <Text style={styles.child}>{'10'}</Text>
+            </Row>
+          </View>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Row wrap="between" />'}</Text>
+          <Text style={styles.title}>{'<Row wrap-between />'}</Text>
+
+          <View style={{width: 200}}>
+            <Row wrap-between style={{...styles.children, height: 300}}>
+              <Text style={styles.child}>{'1'}</Text>
+              <Text style={styles.child}>{'2'}</Text>
+              <Text style={styles.child}>{'3'}</Text>
+              <Text style={styles.child}>{'4'}</Text>
+              <Text style={styles.child}>{'5'}</Text>
+              <Text style={styles.child}>{'6'}</Text>
+              <Text style={styles.child}>{'7'}</Text>
+              <Text style={styles.child}>{'8'}</Text>
+              <Text style={styles.child}>{'9'}</Text>
+              <Text style={styles.child}>{'10'}</Text>
+            </Row>
+          </View>
+        </Stack>
+
+        <Stack style={styles.example}>
           <Text style={styles.title}>{'<Stack />'}</Text>
 
           <Stack

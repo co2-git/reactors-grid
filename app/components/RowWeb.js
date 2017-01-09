@@ -82,6 +82,16 @@ export default function RowWeb(props) {
         alignContent = 'stretch';
       } break;
 
+      case 'around': {
+        flexWrap = 'wrap';
+        alignContent = 'space-around';
+      } break;
+
+      case 'between': {
+        flexWrap = 'wrap';
+        alignContent = 'space-between';
+      } break;
+
       }
     } break;
 
@@ -108,6 +118,16 @@ export default function RowWeb(props) {
     case 'wrap-stretch': {
       flexWrap = 'wrap';
       alignContent = 'stretch';
+    } break;
+
+    case 'wrap-around': {
+      flexWrap = 'wrap';
+      alignContent = 'space-around';
+    } break;
+
+    case 'wrap-between': {
+      flexWrap = 'wrap';
+      alignContent = 'space-between';
     } break;
 
     }
