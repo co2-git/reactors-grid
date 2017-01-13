@@ -6,6 +6,7 @@ export default function StackMobile(props) {
     {
       flexDirection: 'column',
       justifyContent: 'space-between',
+      alignItems: 'stretch',
     },
     props.style,
   ];

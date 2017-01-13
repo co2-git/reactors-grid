@@ -1,4 +1,5 @@
 import React from 'react';
+import Reactors from 'reactors';
 
 export default function StackWeb(props) {
   let justifyContent = 'space-between';
@@ -147,8 +148,13 @@ export default function StackWeb(props) {
     ...props.style,
   };
 
+  const webProps = Reactors.props({
+    ...props,
+    style,
+  });
+
   return (
-    <div style={style}>
+    <div {...webProps}>
       {props.children}
     </div>
   );
