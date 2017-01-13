@@ -4,7 +4,7 @@ import {View} from 'react-native';
 export default function StackMobile(props) {
   const style = [
     {
-      flexDisplay: 'column',
+      flexDirection: 'column',
       justifyContent: 'space-between',
     },
     props.style,

@@ -1,11 +1,51 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View} from 'reactors';
 import {Row, Stack} from 'reactors-grid';
+import {Dropdown} from 'reactors-form';
 
 export default class App extends Component {
+  state = {
+    component: Row,
+  };
+
   render() {
     return (
       <Stack style={styles.container}>
+
+        <Stack center-x style={styles.example}>
+          <Row left>
+            <Text style={styles.title}>{'<'}</Text>
+            <Dropdown
+              data={[
+                {label: 'Row', key: 'Row'},
+                {label: 'Stack', key: 'Stack'},
+              ]}
+              onChange={(component) => {
+                this.setState({component: component === 'Row' ? Row : Stack});
+              }}
+              />
+          </Row>
+          <Row left>
+            <Text style={styles.title}>{'/>'}</Text>
+          </Row>
+
+          <Row style={{width: 200}}>
+            <this.state.component wrap style={styles.children}>
+              <Text style={styles.child}>{'1'}</Text>
+              <Text style={styles.child}>{'2'}</Text>
+              <Text style={styles.child}>{'3'}</Text>
+              <Text style={styles.child}>{'4'}</Text>
+              <Text style={styles.child}>{'5'}</Text>
+              <Text style={styles.child}>{'6'}</Text>
+              <Text style={styles.child}>{'7'}</Text>
+              <Text style={styles.child}>{'8'}</Text>
+              <Text style={styles.child}>{'9'}</Text>
+              <Text style={styles.child}>{'10'}</Text>
+            </this.state.component>
+          </Row>
+        </Stack>
+
+
         <Stack style={styles.example}>
           <Text style={styles.title}>{'<Row />'}</Text>
 
@@ -282,10 +322,41 @@ export default class App extends Component {
         </Stack>
 
         <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Stack reverse />'}</Text>
+
+          <Stack reverse
+            style={{
+              ...styles.children,
+              ...styles.childrenStack,
+            }}
+            >
+            <Text style={styles.child}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={styles.child}>{'3'}</Text>
+          </Stack>
+        </Stack>
+
+        <Stack style={styles.example}>
           <Text style={styles.title}>{'<Stack center />'}</Text>
 
           <Stack
             center
+            style={{
+              ...styles.children,
+              ...styles.childrenStack,
+            }}
+            >
+            <Text style={styles.child}>{'1'}</Text>
+            <Text style={styles.child}>{'2'}</Text>
+            <Text style={styles.child}>{'3'}</Text>
+          </Stack>
+        </Stack>
+
+        <Stack style={styles.example}>
+          <Text style={styles.title}>{'<Stack center-x />'}</Text>
+
+          <Stack
+            center-x
             style={{
               ...styles.children,
               ...styles.childrenStack,
