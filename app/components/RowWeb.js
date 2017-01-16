@@ -19,12 +19,24 @@ export default function RowWeb(props) {
       justifyContent = 'center';
     } break;
 
-    case 'space-between': {
+    case 'space': {
+      justifyContent = `space-${props.space}`;
+    } break;
+
+    case 'space-between':
+    case 'between': {
       justifyContent = 'space-between';
     } break;
 
-    case 'space-around': {
+    case 'space-around':
+    case 'around': {
       justifyContent = 'space-around';
+    } break;
+
+    case 'space-evenly':
+    case 'evenly':
+    case 'even': {
+      justifyContent = 'space-evenly';
     } break;
 
     case 'left': {
@@ -45,6 +57,10 @@ export default function RowWeb(props) {
 
     case 'center-y': {
       alignItems = 'center';
+    } break;
+
+    case 'stretch': {
+      alignItems = 'stretch';
     } break;
 
     case 'reverse': {
