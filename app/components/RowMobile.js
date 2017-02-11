@@ -133,7 +133,7 @@ export default function RowMobile(props) {
 
   let propStyle = props.style;
 
-  if (!Array.isArray(propStyle)) {
+  if (propStyle && !Array.isArray(propStyle)) {
     propStyle = Array.from(propStyle);
   }
 
