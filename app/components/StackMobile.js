@@ -10,6 +10,25 @@ export default function StackMobile(props) {
     },
     props.style,
   ];
+
+  if (props.grow) {
+    style.push({
+      flex: 1,
+    });
+  }
+
+  if (props.centerHorizontal) {
+    style.push({
+      alignItems: 'center',
+    });
+  }
+
+  if (props.centerVertical) {
+    style.push({
+      justifyContent: 'center',
+    });
+  }
+
   return (
     <View style={style} {...props}>
       {props.children}

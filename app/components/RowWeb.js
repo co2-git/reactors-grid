@@ -1,13 +1,16 @@
 import React from 'react';
+import Reactors from 'reactors';
 
 export default function RowWeb(props) {
+  const webProps = Reactors.props(props);
+
   let justifyContent = 'space-between';
   let alignItems = 'center';
   let alignContent = 'stretch';
   let flexDirection = 'row';
   let flexWrap = 'nowrap';
 
-  for (const key in props) {
+  for (const key in webProps) {
     switch (key) {
 
     case 'center': {
@@ -15,7 +18,11 @@ export default function RowWeb(props) {
       alignItems = 'center';
     } break;
 
-    case 'center-x': {
+    case 'center-x':
+    case 'centerX':
+    case 'center-horizontal':
+    case 'centerHorizontal': {
+      delete webProps[key];
       justifyContent = 'center';
     } break;
 
@@ -156,11 +163,11 @@ export default function RowWeb(props) {
     flexDirection,
     flexWrap,
     justifyContent,
-    ...props.style,
+    ...webProps.style,
   };
 
   return (
-    <div style={style}>
+    <div {...webProps} style={style}>
       {props.children}
     </div>
   );

@@ -1,14 +1,15 @@
 import React from 'react';
-import {View} from 'reactors';
+import Reactors, {View} from 'reactors';
 
 export default function RowMobile(props) {
+  const mobileProps = Reactors.props(props);
+
   let justifyContent = 'space-between';
   let alignItems = 'center';
-  let alignContent = 'stretch';
   let flexDirection = 'row';
   let flexWrap = 'nowrap';
 
-  for (const key in props) {
+  for (const key in mobileProps) {
     switch (key) {
 
     case 'center': {
@@ -16,7 +17,7 @@ export default function RowMobile(props) {
       alignItems = 'center';
     } break;
 
-    case 'center-x': {
+    case 'centerHorizontal': {
       justifyContent = 'center';
     } break;
 
@@ -44,7 +45,7 @@ export default function RowMobile(props) {
       alignItems = 'flex-end';
     } break;
 
-    case 'center-y': {
+    case 'centerVertical': {
       alignItems = 'center';
     } break;
 
@@ -65,32 +66,26 @@ export default function RowMobile(props) {
 
       case 'up': {
         flexWrap = 'wrap';
-        alignContent = 'flex-start';
       } break;
 
       case 'down': {
         flexWrap = 'wrap';
-        alignContent = 'flex-end';
       } break;
 
       case 'center': {
         flexWrap = 'wrap';
-        alignContent = 'center';
       } break;
 
       case 'stretch': {
         flexWrap = 'wrap';
-        alignContent = 'stretch';
       } break;
 
       case 'around': {
         flexWrap = 'wrap';
-        alignContent = 'space-around';
       } break;
 
       case 'between': {
         flexWrap = 'wrap';
-        alignContent = 'space-between';
       } break;
 
       }
@@ -103,48 +98,47 @@ export default function RowMobile(props) {
 
     case 'wrap-up': {
       flexWrap = 'wrap';
-      alignContent = 'flex-start';
     } break;
 
     case 'wrap-down': {
       flexWrap = 'wrap';
-      alignContent = 'flex-end';
     } break;
 
     case 'wrap-center': {
       flexWrap = 'wrap';
-      alignContent = 'center';
     } break;
 
     case 'wrap-stretch': {
       flexWrap = 'wrap';
-      alignContent = 'stretch';
     } break;
 
     case 'wrap-around': {
       flexWrap = 'wrap';
-      alignContent = 'space-around';
     } break;
 
     case 'wrap-between': {
       flexWrap = 'wrap';
-      alignContent = 'space-between';
     } break;
 
     }
   }
 
   const style = {
-    alignContent,
+    // alignContent,
     alignItems,
     flexDirection,
     flexWrap,
-    justifyContent,
-    ...props.style,
+    justifyContent
   };
 
+  let propStyle = props.style;
+
+  if (!Array.isArray(propStyle)) {
+    propStyle = Array.from(propStyle);
+  }
+
   return (
-    <View style={style}>
+    <View {...mobileProps} style={[style, ...propStyle]}>
       {props.children}
     </View>
   );
