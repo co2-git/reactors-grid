@@ -62,8 +62,12 @@ export default function RowWeb(props) {
       alignItems = 'flex-end';
     } break;
 
-    case 'center-y': {
+    case 'center-y':
+    case 'centerY':
+    case 'center-vertical':
+    case 'centerVertical': {
       alignItems = 'center';
+      delete webProps[key];
     } break;
 
     case 'stretch': {
