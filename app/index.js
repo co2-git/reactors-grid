@@ -4,7 +4,7 @@ import Base from './Base';
 class ReactorsGridRow extends Component {
   render() {
     return (
-      <Base {...this.props} direction="row" />
+      <Base {...this.props} flexDirection="row" />
     );
   }
 }
@@ -12,7 +12,7 @@ class ReactorsGridRow extends Component {
 class ReactorsGridStack extends Component {
   render() {
     return (
-      <Base {...this.props} direction="column" />
+      <Base {...this.props} flexDirection="column" />
     );
   }
 }

@@ -6,48 +6,42 @@ import omit from 'lodash/omit';
 
 export default class ReactorsGrid extends Component {
   style = {
-    alignContent: 'stretch',
-    alignItems: 'stretch',
-    flex: 0,
-    flexDirection: this.props.direction || 'row',
-    flexGrow: 1,
-    flexWrap: 'nowrap',
-    justifyContent: 'space-between',
+    flexDirection: this.props.flexDirection || 'row',
   };
 
   cases = {
-    around: () => {
+    flexAround: () => {
       this.style.justifyContent = 'space-around';
     },
-    between: () => {
+    flexBetween: () => {
       this.style.justifyContent = 'space-between';
     },
-    center: () => {
+    flexCenter: () => {
       this.style.alignItems = 'center';
       this.style.justifyContent = 'center';
     },
-    centerHorizontal: () => {
+    flexCenterHorizontal: () => {
       const prop = _switch(
-        this.props.direction,
+        this.props.flexDirection,
         {row: 'justifyContent', column: 'alignItems'},
       );
       this.style[prop] = 'center';
     },
-    centerVertical: () => {
+    flexCenterVertical: () => {
       const prop = _switch(
-        this.props.direction,
+        this.props.flexDirection,
         {column: 'justifyContent', row: 'alignItems'},
       );
       this.style[prop] = 'center';
     },
-    down: () => {
+    flexDown: () => {
       const prop = _switch(
-        this.props.direction,
+        this.props.flexDirection,
         {column: 'justifyContent', row: 'alignItems'},
       );
       this.style[prop] = 'flex-end';
     },
-    grow: () => {
+    flexGrow: () => {
       this.style.flexGrow = typeof this.props.flexGrow === 'number' ?
         this.props.flexGrow : 2;
       if (Reactors.isMobile()) {
@@ -55,34 +49,34 @@ export default class ReactorsGrid extends Component {
           this.props.flexGrow : 1;
       }
     },
-    left: () => {
+    flexLeft: () => {
       const prop = _switch(
-        this.props.direction,
+        this.props.flexDirection,
         {row: 'justifyContent', column: 'alignItems'},
       );
       this.style[prop] = 'flex-start';
     },
-    reverse: () => {
+    flexReverse: () => {
       this.style.flexDirection = 'column-reverse';
     },
-    right: () => {
+    flexRight: () => {
       const prop = _switch(
-        this.props.direction,
+        this.props.flexDirection,
         {row: 'justifyContent', column: 'alignItems'},
       );
       this.style[prop] = 'flex-end';
     },
-    stretch: () => {
+    flexStretch: () => {
       this.style.alignItems = 'stretch';
     },
-    up: () => {
+    flexUp: () => {
       const prop = _switch(
-        this.props.direction,
+        this.props.flexDirection,
         {column: 'justifyContent', row: 'alignItems'},
       );
       this.style[prop] = 'flex-start';
     },
-    wrap: () => {
+    flexWrap: () => {
       this.style.flexWrap = this.props.wrap === false ? 'nowrap' : 'wrap';
       this.style.alignContent = _switch(this.props.wrap, {
         around: 'space-around',
@@ -104,7 +98,10 @@ export default class ReactorsGrid extends Component {
 
     const reactorsProps = omit(
       Reactors.props(this.props),
-      keys(this.cases),
+      [
+        ...keys(this.cases),
+        'flexDirection',
+      ],
     );
 
     if (Reactors.isMobile()) {
