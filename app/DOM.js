@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import omit from 'lodash/omit';
+import {View} from 'reactors';
 
 export default class ReactorsGridDOM extends Component {
   render() {
@@ -11,12 +12,12 @@ export default class ReactorsGridDOM extends Component {
     };
     console.log({props, style});
     return (
-      <div
+      <View
         {...props}
         style={style}
         >
         {this.props.children}
-      </div>
+      </View>
     );
   }
 }
