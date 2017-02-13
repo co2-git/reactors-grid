@@ -8,6 +8,7 @@ export default class ReactorsGrid extends Component {
   style = {
     alignContent: 'stretch',
     alignItems: 'stretch',
+    flex: 0,
     flexDirection: this.props.direction || 'row',
     flexGrow: 1,
     flexWrap: 'nowrap',
@@ -47,7 +48,12 @@ export default class ReactorsGrid extends Component {
       this.style[prop] = 'flex-end';
     },
     grow: () => {
-      this.style.flexGrow = 2;
+      this.style.flexGrow = typeof this.props.flexGrow === 'number' ?
+        this.props.flexGrow : 2;
+      if (Reactors.isMobile()) {
+        this.style.flex = typeof this.props.flexGrow === 'number' ?
+          this.props.flexGrow : 1;
+      }
     },
     left: () => {
       const prop = _switch(
@@ -101,14 +107,7 @@ export default class ReactorsGrid extends Component {
       keys(this.cases),
     );
 
-    console.info({style: this.style});
-
-    switch (Reactors.platform) {
-
-    default:
-      throw new Error('Unsupported platform: ' + Reactors.platform);
-
-    case 'mobile': {
+    if (Reactors.isMobile()) {
       const ReactorsGridMobile = require('./Mobile').default;
       return (
         <ReactorsGridMobile
@@ -117,18 +116,15 @@ export default class ReactorsGrid extends Component {
           />
       );
     }
-
-    case 'web':
-    case 'desktop': {
-      const ReactorsGridStackDOM = require('./DOM').default;
+    if (Reactors.isDOM()) {
+      const ReactorsGridDOM = require('./DOM').default;
       return (
-        <ReactorsGridStackDOM
+        <ReactorsGridDOM
           {...reactorsProps}
           __ReactorsGridStyle={this.style}
           />
       );
     }
-
-    }
+    throw new Error(`Unsupported platform: ${Reactors.platform}`);
   }
 }
