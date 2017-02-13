@@ -1,16 +1,15 @@
 import React, {Component} from 'react';
 import omit from 'lodash/omit';
-import {View} from 'reactors';
+import Reactors, {View} from 'reactors';
 
 export default class ReactorsGridDOM extends Component {
   render() {
     const props = omit(this.props, ['__ReactorsGridStyle']);
-    const style = {
-      display: 'flex',
-      ...omit(this.props.__ReactorsGridStyle, ['flex']),
-      ...this.props.style,
-    };
-    console.log({props, style});
+    const style = Reactors.mergeStyles(
+      {display: 'flex'},
+      omit(this.props.__ReactorsGridStyle, ['flex']),
+      this.props.style,
+    );
     return (
       <View
         {...props}

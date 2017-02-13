@@ -1,23 +1,19 @@
 import React, {Component} from 'react';
-import {View} from 'react-native';
+import Reactors, {View} from 'reactors';
 import omit from 'lodash/omit';
 
 export default class ReactorsGridMobile extends Component {
   render() {
-    let propStyle = this.props.style || [];
+    const props = omit(this.props, ['__ReactorsGridStyle']);
+    const style = Reactors.mergeStyles(
+      omit(this.props.__ReactorsGridStyle, ['alignContent']),
+      this.props.style,
+    );
 
-    if (!Array.isArray(propStyle)) {
-      propStyle = Array.from(propStyle);
-    }
+    console.log({props, style});
 
     return (
-      <View
-        {...omit(this.props, ['__ReactorsGridStyle'])}
-        style={[
-          omit(this.props.__ReactorsGridStyle, ['alignContent']),
-          ...propStyle,
-        ]}
-        >
+      <View {...props} style={style}>
         {this.props.children}
       </View>
     );
