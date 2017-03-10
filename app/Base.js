@@ -57,7 +57,20 @@ export default class ReactorsGrid extends Component {
       this.style[prop] = 'flex-start';
     },
     flexReverse: () => {
-      this.style.flexDirection = 'column-reverse';
+      switch (this.style.flexDirection) {
+      case 'row':
+        this.style.flexDirection = 'row-reverse';
+        break;
+      case 'column':
+        this.style.flexDirection = 'column-reverse';
+        break;
+      case 'row-reverse':
+        this.style.flexDirection = 'row';
+        break;
+      case 'column-reverse':
+        this.style.flexDirection = 'column-reverse';
+        break;
+      }
     },
     flexRight: () => {
       const prop = _switch(

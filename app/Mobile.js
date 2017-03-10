@@ -10,8 +10,6 @@ export default class ReactorsGridMobile extends Component {
       this.props.style,
     );
 
-    console.log({props, style});
-
     return (
       <View {...props} style={style}>
         {this.props.children}

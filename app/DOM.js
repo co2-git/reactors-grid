@@ -11,10 +11,7 @@ export default class ReactorsGridDOM extends Component {
       this.props.style,
     );
     return (
-      <View
-        {...props}
-        style={style}
-        >
+      <View {...props} style={style}>
         {this.props.children}
       </View>
     );
