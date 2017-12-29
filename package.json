@@ -30,7 +30,6 @@
     "babel": "babel --out-dir dist/ app/",
     "babel:watch": "babel --watch --out-dir dist/ app/",
     "eslint": "eslint app",
-    "prepush": "npm run eslint && npm test",
     "test": "jest --colors --debug --notify --verbose"
   },
   "author": "",
