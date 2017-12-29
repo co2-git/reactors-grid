@@ -4640,10 +4640,6 @@ ultron@1.0.x:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/ultron/-/ultron-1.0.2.tgz#ace116ab557cd197386a4e88f4685378c8b2e4fa"
 
-underscore-switch@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/underscore-switch/-/underscore-switch-1.0.0.tgz#a9e618da3a02b49eb6a75f64ef6ff08fd9548eb2"
-
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
